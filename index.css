@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:200vh;
+}
+
+.menu-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+
+.restaurant-name {
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    color: #333;
+}
+nav{
+    text-align: center;
+    position: relative;
+    font-size: 1rem;
+}
+nav a{
+    color: #333;
+    margin:5px;
+    text-decoration: none;
+}
+
+.restaurant-name::before {
+    content: '★';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.restaurant-name::after {
+    content: '★';
+    position: absolute;
+    right: -40px;
+    top: 0;
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-areas: 
+        "starters starters" 
+        "main-course main-course"
+        "mocktails mocktails"
+        "desserts desserts";
+    gap: 20px;
+}
+
+.menu-section:nth-child(1) {
+    grid-area: starters;
+}
+
+.menu-section:nth-child(2) {
+    grid-area: main-course;
+}
+
+.menu-section:nth-child(3) {
+    grid-area: mocktails;
+}
+
+.menu-section:nth-child(4) {
+    grid-area: desserts;
+}
+
+.menu-section {
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item p::before {
+    content: '•';
+    color: #ff6347;
+    margin-right: 10px;
+}
+
+.menu-item p.price {
+    font-weight: bold;
+    color: #555;
+}
